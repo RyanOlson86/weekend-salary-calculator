@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
-  <script defer src="salary.js"></script>
-  <title>Salary Calculator</title>
-</head>
-<body>
-  <header>
-    <h1>Salary Calculator</h1>
-  </header>
-  <main>
-    <h2>Add Employee</h2>
-    <h2>Employees</h2>
-  </main>
-  <footer>
-    <p>Total Monthly</p>
-  </footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="salary.js"></script>
+    <title>Salary Calculator</title>
+  </head>
+  <body>
+    <header>
+      <h1>Salary Calculator</h1>
+    </header>
+    <main>
+      <h2>Add Employee</h2>
+      <form action="">
+        <input data-testid="firstNameInput" placeholder="First Name" type="text"/>
+        <input data-testid="lastNameInput" placeholder="Last Name" type="text"/>
+        <input data-testid="idInput" placeholder="Employee ID" type="text"/>
+        <input data-testid="titleInput" placeholder="Title" type="text"/>
+        <input data-testid="annualSalaryInput" placeholder="First Name" type="text"/>
+      </form>
+      <h2>Employees</h2>
+    </main>
+    <footer>
+      <p>Total Monthly</p>
+    </footer>
+  </body>
 </html>
