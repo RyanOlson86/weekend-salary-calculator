@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
-    <script defer src="salary.js"></script>
+    <script defer src="script.js"></script>
     <title>Salary Calculator</title>
   </head>
   <body>
@@ -19,7 +19,7 @@
           <input id="idInput" data-testid="idInput" placeholder="Employee ID" type="text" />
           <input id="titleInput" data-testid="titleInput" placeholder="Title" type="text" />
           <input id="annualSalaryInput" data-testid="annualSalaryInput" placeholder="Annual Salary" type="text" />
-          <button onclick="submitInfo(event)">Submit</button>
+          <button data-testid="submitButton" onclick="submitInfo(event)">Submit</button>
         </form>
       </section>
 
@@ -37,21 +37,21 @@
             </tr>
           </thead>
           <tbody id="tableBody">
-            <tr>
+            <!-- <tr>
               <td>Ryan</td>
               <td>Olson</td>
               <td>1234</td>
               <td>Master</td>
               <td>100000</td>
               <td></td>
-            </tr>
+            </tr> -->
           </tbody>
         </table>
       </section>
 
     </main>
     <footer>
-      <p id="salary-footer">Total Monthly: </p>
+      <p id="over-budget">Total Monthly: </p>
     </footer>
   </body>
 </html>

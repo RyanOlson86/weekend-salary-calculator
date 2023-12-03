@@ -18,6 +18,12 @@ function submitInfo(event) {
   let annualSalaryInput = document.getElementById("annualSalaryInput").value;
 
   monthlySalary += annualSalaryInput / 12;
+  let monthlySalaryPath = document.getElementById('over-budget');
+  if(monthlySalary>20000){
+    document.querySelector('footer').classList.add('over-budget');
+  }
+  // Add monthlySalary to footer
+  monthlySalaryPath.innerHTML = `<p>Total Monthly: ${monthlySalary}</p>`
 
   // code to add new table elements
   let row = tableBody.insertRow(0);
@@ -35,9 +41,8 @@ function submitInfo(event) {
   cell4.innerHTML = annualSalaryInput;
   // cell5.innerHTML =firstName;
 
-  // Add monthlySalary to footer
-  document.getElementById('salary-footer').innerHTML = `<p>Total Monthly: ${monthlySalary}</p>`
-
+  // clear the form
+  document.getElementById("formInputs").reset()
   // Use this to stop submit button from refreshing page
   event.preventDefault();
 }
