@@ -32,17 +32,20 @@ function submitInfo(event) {
   let cell2 = row.insertCell(2);
   let cell3 = row.insertCell(3);
   let cell4 = row.insertCell(4);
-  // let cell5 = row.insertCell(5);
+  let cell5 = row.insertCell(5);
 
   cell0.innerHTML = firstName;
   cell1.innerHTML = lastName;
   cell2.innerHTML = idInput;
   cell3.innerHTML = titleInput;
   cell4.innerHTML = annualSalaryInput;
-  // cell5.innerHTML =firstName;
+  cell5.innerHTML ='<button onclick="deleteInfo(event)">❌</button>';
 
   // clear the form
   document.getElementById("formInputs").reset()
   // Use this to stop submit button from refreshing page
   event.preventDefault();
+}
+function deleteInfo(event){
+  event.target.parentNode.parentNode.remove();
 }
